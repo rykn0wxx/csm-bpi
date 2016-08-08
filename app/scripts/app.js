@@ -2,20 +2,17 @@
 
 /**
  * @ngdoc overview
- * @name csmBpiApp
+ * @name csmappApp
  * @description
- * # csmBpiApp
+ * # csmappApp
  *
  * Main module of the application.
  */
 angular
-  .module('csmBpiApp', [
-    'ngAnimate',
-    'ngCookies',
+  .module('csmappApp', [
     'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'reveal'
+    'csm.boxes',
+    'csm.reveals'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -28,6 +25,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/decks', {
+        templateUrl: 'views/decks.html',
+        controller: 'DecksCtrl',
+        controllerAs: 'decks'
       })
       .otherwise({
         redirectTo: '/'

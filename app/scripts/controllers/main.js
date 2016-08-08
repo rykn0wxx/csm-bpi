@@ -2,16 +2,13 @@
 
 /**
  * @ngdoc function
- * @name csmBpiApp.controller:MainCtrl
+ * @name csmappApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the csmBpiApp
+ * Controller of the csmappApp
  */
-angular.module('csmBpiApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('csmappApp')
+.controller('MainCtrl', [function () {
+	var me = this;
+	me.asdkk = '';
+}]);
